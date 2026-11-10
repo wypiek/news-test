@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "rootDir": "src/server",
+    "outDir": "dist/server",
+    "types": ["node"],
+    "lib": ["ES2022"]
+  },
+  "include": ["src/server/**/*.ts"]
+}

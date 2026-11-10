@@ -1,0 +1,22 @@
+{
+  "name": "pulse-news",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A minimalist, self-hosted news engine with a Material 3 Expressive UI",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.server.json && tsc -p tsconfig.client.json",
+    "start": "node --disable-warning=ExperimentalWarning dist/server/server.js",
+    "dev": "npm run build && node --disable-warning=ExperimentalWarning --watch dist/server/server.js",
+    "user": "node --disable-warning=ExperimentalWarning dist/server/cli.js",
+    "typecheck": "tsc -p tsconfig.server.json --noEmit && tsc -p tsconfig.client.json --noEmit",
+    "test": "npm run build && node --disable-warning=ExperimentalWarning --test \"dist/server/*.test.js\""
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "typescript": "^5.9.3"
+  }
+}
